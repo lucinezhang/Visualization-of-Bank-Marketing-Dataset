@@ -40,6 +40,8 @@ $ python app.py
 ```
 4. Open your browser (better using _Chrome_ in full-screen mode) and visit _localhost:5000_. Then enjoy playing with it!
 
+__Note__: In _Basic_ mode, users can add only one constraint on each of 9 attributes. While in _Advance_ mode, users can freely add several constraints on each attribute at the same time.
+
 ## Some Results
 ![](result1.png)
 ![](result2.png)
