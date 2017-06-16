@@ -41,4 +41,7 @@ $ python app.py
 4. Open your browser (better using _Chrome_ in full-screen mode) and visit _localhost:5000_. Then enjoy playing with it!
 
 ## Some Results
-
+![](result1.png)
+![](result2.png)
+![](result3.png)
+![](result4.png)
