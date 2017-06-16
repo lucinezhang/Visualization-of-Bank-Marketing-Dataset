@@ -1,0 +1,539 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Bank Marketing Data Set</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+
+	<body>
+		<!-- 导航栏 -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<!-- 标题 -->
+				<div class="navbar-header">
+					<strong class="navbar-brand"><strong id="red">Bank Marketing </strong>Data Set</strong>
+					<p class="mSubTitle">Visualization of data distribution</p>
+				</div>
+				<!-- 作者落款 -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a>Basic</a></li>
+						<li><a href="advance.html">Advance</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a>Zhang Luxin ~ Course of Data Warehousing and Data Mining</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- 主视图 -->
+		<div class="mainView viewBorder">
+			<label style="margin-left:0%;margin-top:0%"><input id="pic1" type="checkbox"> Sort Values
+			</label>
+			<label style="margin-left:25%;margin-top:0%"><input id="pic2" type="checkbox"> Sort Values
+			</label>
+			<label style="margin-left:50%;margin-top:0%"><input id="pic3" type="checkbox"> Sort Values
+			</label>
+			<label style="margin-left:0%;margin-top:16%"><input id="pic4" type="checkbox"> Sort Values
+			</label>
+			<label style="margin-left:25%;margin-top:16%"><input id="pic5" type="checkbox"> Sort Values
+			</label>
+			<label style="margin-left:50%; margin-top:16%"><input id="pic6" type="checkbox"> Sort Values
+			</label>
+			<label style="margin-left:0%;margin-top:32%"><input id="pic7" type="checkbox"> Sort Values
+			</label>
+			<label style="margin-left:25%; margin-top:32%"><input id="pic8" type="checkbox"> Sort Values
+			</label>
+			<label style="margin-left:50%; margin-top:32%"><input id="pic9" type="checkbox"> Sort Values
+			</label>
+		</div>
+
+
+		<!-- 选择视图，包括下拉列表、复选框和查询按钮 -->
+		<div class="selectView viewBorder">
+			<p style="margin-left: 53%; margin-top: 20%">age
+			<select id="age" style="margin-left: 3%; width: 70px; background-color: white">
+				<option value="all">all</option>
+				<option value="15~25">15~25</option>
+				<option value="25~35">25~35</option>
+				<option value="35~45">35~45</option>
+				<option value="45~55">45~55</option>
+				<option value="55~65">55~65</option>
+				<option value="65~75">65~75</option>
+				<option value="75~85">75~85</option>
+				<option value="85~95">85~95</option>
+			</select></p>
+			
+			<p style="margin-left: 55%; margin-top: 10%">job
+			<select id="job" style="margin-left: 3%; width: 70px; background-color: white">
+				<option value="all">all</option>
+				<option value="admin.">admin.</option>
+				<option value="blue-collar">blue-collar</option>
+				<option value="entrepreneur">entrepreneur</option>
+				<option value="housemaid">housemaid</option>
+				<option value="management">management</option>
+				<option value="retired">retired</option>
+				<option value="self-employed">self-employed</option>
+				<option value="services">services</option>
+				<option value="student">student</option>
+				<option value="technician">technician</option>
+				<option value="unemployed">unemployed</option>
+				<option value="unknown">unknown</option>
+			</select></p>
+
+			<p style="margin-left: 47%; margin-top: 10%">marital
+			<select id="marital" style="margin-left: 3%; width: 70px; background-color: white">
+				<option value="all">all</option>
+				<option value="divorced">divorced</option>
+				<option value="married">married</option>
+				<option value="single">single</option>
+			</select></p>
+
+			<p style="margin-left: 41%; margin-top: 10%">education
+			<select id="education" style="margin-left: 3%; width: 70px; background-color: white">
+				<option value="all">all</option>
+				<option value="primary">primary</option>
+				<option value="secondary">secondary</option>
+				<option value="tertiary">tertiary</option>
+				<option value="unknown">unknown</option>
+			</select></p>
+
+			<p style="margin-left: 3%; margin-top: 10%">default: Has credit in default?
+			<select id="default" style="margin-left: 1%; width: 70px; background-color: white">
+				<option value="all">all</option>
+				<option value="yes">yes</option>
+				<option value="no">no</option>
+			</select></p>
+
+			<p style="margin-left: 6%; margin-top: 10%">housing: Has housing loan?
+			<select id="housing" style="margin-left: 1%; width: 70px; background-color: white">
+				<option value="all">all</option>
+				<option value="yes">yes</option>
+				<option value="no">no</option>
+			</select></p>
+
+			<p style="margin-left: 12%; margin-top: 10%">loan: Has personal loan?
+			<select id="loan" style="margin-left: 1%; width: 70px; background-color: white">
+				<option value="all">all</option>
+				<option value="yes">yes</option>
+				<option value="no">no</option>
+			</select></p>
+
+			<p style="margin-left: 6%; margin-top: 10%">contact communication type
+			<select id="contact" style="margin-left: 1%; width: 70px; background-color: white">
+				<option value="all">all</option>
+				<option value="cellular">cellular</option>
+				<option value="telephone">telephone</option>
+				<option value="unknown">unknown</option>
+			</select></p>
+
+			<p style="margin-left: 10%; margin-top: 10%">last contact month of year
+			<select id="month" style="margin-left: 1%; width: 70px; background-color: white">
+				<option value="all">all</option>
+				<option value="jan">JAN</option>
+				<option value="feb">FEB</option>
+				<option value="mar">MAR</option>
+				<option value="apr">APR</option>
+				<option value="may">MAY</option>
+				<option value="jun">JUN</option>
+				<option value="jul">JUL</option>
+				<option value="aug">AUG</option>
+				<option value="sep">SEP</option>
+				<option value="oct">OCT</option>
+				<option value="nov">NOV</option>
+				<option value="dec">DEC</option>
+			</select></p>
+
+			<input id="selectage" type="checkbox" style="position:absolute;left:96%;top:80px;zoom:150%" checked="checked">
+			<input id="selectjob" type="checkbox" style="position:absolute;left:96%;top:115px;zoom:150%" checked="checked">
+			<input id="selectmari" type="checkbox" style="position:absolute;left:96%;top:150px;zoom:150%" checked="checked">
+			<input id="selectedu" type="checkbox" style="position:absolute;left:96%;top:185px;zoom:150%" checked="checked">
+			<input id="selectdef" type="checkbox" style="position:absolute;left:96%;top:220px;zoom:150%" checked="checked">
+			<input id="selecthous" type="checkbox" style="position:absolute;left:96%;top:255px;zoom:150%" checked="checked">
+			<input id="selectloan" type="checkbox" style="position:absolute;left:96%;top:290px;zoom:150%" checked="checked">
+			<input id="selectcon" type="checkbox" style="position:absolute;left:96%;top:325px;zoom:150%" checked="checked">
+			<input id="selectmon" type="checkbox" style="position:absolute;left:96%;top:360px;zoom:150%" checked="checked">
+
+			<button class="btn btn-danger" type="button" style="margin-left:35%; margin-top:17%; width:30%;">Search</button>
+		</div>
+
+
+		<script src="libs/d3.v3.min.js"></script>
+		<script src="libs/jquery.min.js"></script>
+		<script src="libs/bootstrap.min.js"></script>
+		<script src="libs/d3.tip.v0.6.3.js"></script>
+
+		<script content="functions and global parameters">
+
+			/****************************************************************/
+			/**************************** 函数集合 ***************************/
+			/****************************************************************/
+			/************ 在后面的代码中会有调用，为了方便全写在前面了 *************/
+
+			//画图的函数
+			function makepic1(send_data, filename, attrname, sum) {
+
+				$.post('/' + filename, send_data, function(data) {
+
+					// 准备绘图用的svg
+					var width = $('.mainView').width()/3 - margin.left - margin.right;
+					var height = $('.mainView').height()/3 - margin.top - margin.bottom - 17;
+
+					//准备x轴和y轴
+					var x = d3.scale.ordinal()
+					    .rangeRoundBands([0, width], .1, 1);
+
+					var y = d3.scale.linear()
+					    .range([height, 0]);
+
+					var xAxis = d3.svg.axis()
+					    .scale(x)
+					    .orient("bottom");
+
+					var yAxis = d3.svg.axis()
+					    .scale(y)
+					    .orient("left");
+
+					//这里实现的是鼠标悬停功能
+					var tip = d3.tip()
+		  				.attr('class', 'd3-tip')
+		  				.offset([-10, 0])
+		  				.html(function(d) {
+		    				return "<strong>Number:</strong><span style='color:red'>"+d.num+"</span><strong> Percent:</strong><span style='color:red'>"+d.percent+"%</span>";
+		  				});
+
+					var mainSvg = d3.select(".mainView")
+						.append("svg")
+					    .attr("width", width + margin.left + margin.right)
+					    .attr("height", height + margin.top + margin.bottom + 17)
+					  	.append("g")
+					  	.attr("class", "mainSvg")
+					  	.attr("style","float:left")
+					    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+					mainSvg.call(tip);
+
+					data.forEach(function(d) { d.num = +d.num;});
+
+				  	x.domain(data.map(function(d) { return d.attr; }));
+				  	y.domain([0, d3.max(data, function(d) { return d.num; }) * 1.1]);
+
+				  	mainSvg.append("g")
+				    .attr("class", "x axis")
+				    .attr("transform", "translate(0," + height + ")")
+				    .call(xAxis)
+				    .append("text")
+				    .style("text-anchor", "end")
+				    .attr("x", 255)
+				    .text(attrname)
+
+				    // 把坐标轴的文字斜着布置，节省空间
+					mainSvg.selectAll(".x.axis > g > text")
+					.attr("transform", "rotate(30)")
+					.style("text-anchor", "start");
+
+					mainSvg.append("g")
+					.attr("class", "y axis")
+			        .call(yAxis)
+			        .append("text")
+			        .attr("transform", "rotate(-90)")
+			        .attr("y", 2)
+			        .attr("dy", ".71em")
+			        .style("text-anchor", "end")
+			        .text("number");
+
+			        //给柱形图着色
+			        var colors = d3.scale.ordinal()
+    				.domain(data.map(function(d) { return d.attr; }))
+    				.range(['#e6550d','#fd8d3c','#fdae6b','#fdd0a2','#31a354','#74c476',
+							'#a1d99b','#c7e9c0','#756bb1','#9e9ac8','#bcbddc','#dadaeb']);
+
+				  	mainSvg.selectAll(".bar")
+				    .data(data)
+				    .enter().append("rect")
+				    .attr("class", "bar")
+				    .attr("fill", function(d) { return colors(d.attr) })
+				    .attr("x", function(d) { return x(d.attr); })
+				    .attr("width", x.rangeBand())
+				    .attr("y", function(d) { return y(d.num); })
+				    .attr("height", function(d) { return height - y(d.num)})
+				    .on('mouseover', tip.show)
+	      			.on('mouseout', tip.hide);
+
+	      			// 这里是实现的利用复选框进行排序的功能
+				  	d3.select("#pic" + sum).on("change", change);
+
+					var sortTimeout = setTimeout(function() {
+						d3.select("#pic"+ sum).property("checked", true).each(change); }, 2000);
+
+				  	function change() {
+					    clearTimeout(sortTimeout);
+
+					    // Copy-on-write since tweens are evaluated after a delay.
+					    var x0 = x.domain(data.sort(this.checked
+					        ? function(a, b) { return b.num - a.num; }
+					        : function(a, b) { return d3.ascending(a.attr, b.attr); })
+					        .map(function(d) { return d.attr; }))
+					        .copy();
+
+					    mainSvg.selectAll(".bar")
+					        .sort(function(a, b) { return x0(a.attr) - x0(b.attr); });
+
+					    var transition = mainSvg.transition().duration(750),
+					        delay = function(d, i) { return i * 50; };
+
+					    transition.selectAll(".bar")
+					        .delay(delay)
+					        .attr("x", function(d) { return x0(d.attr); });
+
+					    transition.select(".x.axis")
+					        .call(xAxis)
+					      	.selectAll("g")
+					        .delay(delay);
+
+					    mainSvg.selectAll(".x.axis > g > text")
+							.attr("transform", "rotate(30)")
+							.style("text-anchor", "start");
+				    };
+				});
+			};
+
+			//由于第二个图属性值名字较长，一些参数不太一样，所以重新写了一个
+			function makepic2(send_data, sum) {
+
+				$.post("/pic2", send_data, function(data) {
+
+					// 准备绘图用的svg
+					var width = $('.mainView').width()/3 - margin.left - margin.right;
+					var height = $('.mainView').height()/3 - margin.top - margin.bottom - 27;
+
+					var x = d3.scale.ordinal()
+					    .rangeRoundBands([0, width], .1, 1);
+
+					var y = d3.scale.linear()
+					    .range([height, 0]);
+
+					var xAxis = d3.svg.axis()
+					    .scale(x)
+					    .orient("bottom");
+
+					var yAxis = d3.svg.axis()
+					    .scale(y)
+					    .orient("left");
+
+					var tip = d3.tip()
+		  				.attr('class', 'd3-tip')
+		  				.offset([-10, 0])
+		  				.html(function(d) {
+		    				return "<strong>Number:</strong><span style='color:red'>"+d.num+"</span><strong> Percent:</strong><span style='color:red'>"+d.percent+"%</span>";
+		  				});
+
+					var mainSvg = d3.select(".mainView")
+						.append("svg")
+					    .attr("width", width + margin.left + margin.right)
+					    .attr("height", height + margin.top + margin.bottom + 27)
+					  	.append("g")
+					  	.attr("class", "mainSvg")
+					  	.attr("style","float:left")
+					    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+					mainSvg.call(tip);
+
+					data.forEach(function(d) { d.num = +d.num;});
+
+				  	x.domain(data.map(function(d) { return d.job; }));
+				  	y.domain([0, d3.max(data, function(d) { return d.num; }) * 1.1]);
+
+				  	mainSvg.append("g")
+				    .attr("class", "x axis")
+				    .attr("transform", "translate(0," + height + ")")
+				    .call(xAxis)
+				    .append("text")
+				    .style("text-anchor", "end")
+				    .attr("x", 255)
+				    .text("job")
+
+				    // 把坐标轴的文字斜着布置，节省空间
+					mainSvg.selectAll(".x.axis > g > text")
+					.attr("transform", "rotate(30)")
+					.style("text-anchor", "start");
+
+					mainSvg.append("g")
+					.attr("class", "y axis")
+			        .call(yAxis)
+			        .append("text")
+			        .attr("transform", "rotate(-90)")
+			        .attr("y", 2)
+			        .attr("dy", ".71em")
+			        .style("text-anchor", "end")
+			        .text("number");
+
+			        var colors = d3.scale.ordinal()
+    				.domain(data.map(function(d) { return d.job; }))
+    				.range(['#e6550d','#fd8d3c','#fdae6b','#fdd0a2','#31a354','#74c476',
+							'#a1d99b','#c7e9c0','#756bb1','#9e9ac8','#bcbddc','#dadaeb']);
+
+				  	mainSvg.selectAll(".bar")
+				    .data(data)
+				    .enter().append("rect")
+				    .attr("class", "bar")
+				    .attr("fill", function(d) { return colors(d.job) })
+				    .attr("x", function(d) { return x(d.job); })
+				    .attr("width", x.rangeBand())
+				    .attr("y", function(d) { return y(d.num); })
+				    .attr("height", function(d) { return height - y(d.num)})
+				    .on('mouseover', tip.show)
+	      			.on('mouseout', tip.hide);
+
+				  	d3.select("#pic" + sum).on("change", change);
+
+					var sortTimeout = setTimeout(function() {
+						d3.select("#pic" + sum).property("checked", true).each(change); }, 2000);
+
+				  	function change() {
+					    clearTimeout(sortTimeout);
+
+					    // Copy-on-write since tweens are evaluated after a delay.
+					    var x0 = x.domain(data.sort(this.checked
+					        ? function(a, b) { return b.num - a.num; }
+					        : function(a, b) { return d3.ascending(a.job, b.job); })
+					        .map(function(d) { return d.job; }))
+					        .copy();
+
+					    mainSvg.selectAll(".bar")
+					        .sort(function(a, b) { return x0(a.job) - x0(b.job); });
+
+					    var transition = mainSvg.transition().duration(750),
+					        delay = function(d, i) { return i * 50; };
+
+					    transition.selectAll(".bar")
+					        .delay(delay)
+					        .attr("x", function(d) { return x0(d.job); });
+
+					    transition.select(".x.axis")
+					        .call(xAxis)
+					      	.selectAll("g")
+					        .delay(delay);
+
+					    // 把坐标轴的文字斜着布置，节省空间
+						mainSvg.selectAll(".x.axis > g > text")
+							.attr("transform", "rotate(30)")
+							.style("text-anchor", "start");
+				    };
+				});
+			};
+			
+			//判断是否选择该属性
+			function judge(object,attr) {
+				if(object.checked)
+				{
+					$("#"+attr).attr("disabled",false);
+					$("#"+attr).attr("style","margin-left:1%; width:70px; background-color: white");
+				}
+				else
+				{
+					$("#"+attr).attr("disabled",true);
+					$("#"+attr).attr("style","margin-left:1%; width:70px; background-color:darkgray");
+				}
+			}
+
+			/*****************************************************************/
+			/************************* 全局变量集合 **************************/
+			/*****************************************************************/
+
+			var margin = {left:50, top:20, right:20, bottom:20};
+			var screenWidth = $(document).width() - 20;
+			var screenHeight = $(document).height() - 70;
+			$(".mainView").css("width", screenWidth * 0.75);
+			$(".mainView").css("height", screenHeight);
+			$(".selectView").css("width",screenWidth * 0.25);
+			$(".selectView").css("height", screenHeight);
+
+		</script>
+
+		<!-- Main View 的绘制模块-->
+		<script content="mainView">
+
+			d3.select("button").on("click", function() {
+				d3.selectAll(".mainView > svg").remove();
+
+				var select_age = $("#age").val();
+				var select_job = $("#job").val();
+				var select_mari = $("#marital").val();
+				var select_edu = $("#education").val();
+				var select_def = $("#default").val();
+				var select_hous = $("#housing").val();
+				var select_loan = $("#loan").val();
+				var select_con = $("#contact").val();
+				var select_mon = $("#month").val();
+
+				var send_data = {age:select_age, job:select_job, marital:select_mari, 
+								education:select_edu, default:select_def, housing:select_hous,
+								loan:select_loan, contact:select_con, month:select_mon};
+
+				var sum = 0;
+				if(d3.select("#selectage").property("checked"))
+				{
+					sum = sum + 1;
+					makepic1(send_data, "pic1", "age", sum);
+				}
+				if(d3.select("#selectjob").property("checked"))
+				{
+					sum = sum + 1;
+					makepic2(send_data, sum);
+				}
+				if(d3.select("#selectmari").property("checked"))
+				{
+					sum = sum + 1;
+					makepic1(send_data, "pic3", "marital", sum);
+				}
+				if(d3.select("#selectedu").property("checked"))
+				{
+					sum = sum + 1;
+					makepic1(send_data, "pic4", "education", sum);
+				}
+				if(d3.select("#selectdef").property("checked"))
+				{
+					sum = sum + 1;
+					makepic1(send_data, "pic5", "default", sum);
+				}
+				if(d3.select("#selecthous").property("checked"))
+				{
+					sum = sum + 1;
+					makepic1(send_data, "pic6", "housing", sum);
+				}
+				if(d3.select("#selectloan").property("checked"))
+				{
+					sum = sum + 1;
+					makepic1(send_data, "pic7", "loan", sum);
+				}
+				if(d3.select("#selectcon").property("checked"))
+				{
+					sum = sum + 1;
+					makepic1(send_data, "pic8", "contact", sum);
+				}
+				if(d3.select("#selectmon").property("checked"))
+				{
+					sum = sum + 1;
+					makepic1(send_data, "pic9", "month", sum);
+				}
+			});
+		</script>
+
+		<script content="selectView">
+			d3.select("#selectage").on("change", function() {judge(this,"age")});
+			d3.select("#selectjob").on("change", function() {judge(this,"job")});
+			d3.select("#selectmari").on("change", function() {judge(this,"marital")});
+			d3.select("#selectedu").on("change", function() {judge(this,"education")});
+			d3.select("#selectdef").on("change", function() {judge(this,"default")});
+			d3.select("#selecthous").on("change", function() {judge(this,"housing")});
+			d3.select("#selectloan").on("change", function() {judge(this,"loan")});
+			d3.select("#selectcon").on("change", function() {judge(this,"contact")});
+			d3.select("#selectmon").on("change", function() {judge(this,"month")});
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,110 @@
+html {
+	padding-top: 50px;
+}
+
+body {
+	font-family: Helvetica;
+	margin: 8px 8px 8px 8px;
+}
+.viewBorder {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #ccc;
+}
+
+.mainView {
+	float: left;
+	border-radius: 5px 0px 0px 5px;
+	background-color: #eee;
+}
+
+.selectView {
+	float: left;
+	border-left-width: 0px;
+	border-radius: 0px 5px 5px 0px;
+	background-color: #eee;
+}
+
+#red {
+	color: red;
+}
+
+.navbar-brand {
+	font-size: 22px;
+	height: 30;
+	padding-top: 10px;
+	padding-bottom: 0;
+}
+
+.mSubTitle {
+	font-size: 12.8px;
+	color: #aaa;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.axis > text > tspan {
+	font-family: Helvetica;
+	font-size: 13px;
+	font-weight: 300;	
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill-opacity: .9;
+}
+
+.bar:hover {
+	fill: deepskyblue;
+	fill-opacity: .9;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+label {
+	position: absolute;
+	top: 9%;
+	left: 15%;
+}
