@@ -47,6 +47,6 @@ $ python app.py
 ![](result4.png)
 
 ## References
-[1] Documentation of _Flask_: [http://docs.jinkan.org/docs/flask/](http://docs.jinkan.org/docs/flask/) 
+[1] Documentation of _Flask_: [http://docs.jinkan.org/docs/flask/](http://docs.jinkan.org/docs/flask/)
 [2] Official website of D3.js: [https://d3js.org/](https://d3js.org/)
 [3] Some tutorials about _HTML/CSS/JavaScript/Python_: [http://www.runoob.com/](http://www.runoob.com/)
